@@ -17,7 +17,8 @@ public class OrderServer {
 			//TODO
 			Response queryResponse = request("GET","http://localhost:3154/queryItem?id=1");
 			Map<String,Object> result = queryResponse.json();
-			if((int)result.get("quantity")>0) {
+			
+			if((double)result.get("quantity")>0) {//TODO double?????????????????
 				Response buyResponse = request("PUT","http://localhost:3154/update?id=1");
 				return buyResponse.status;
 			}
