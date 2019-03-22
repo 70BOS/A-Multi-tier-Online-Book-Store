@@ -11,7 +11,7 @@ import spark.utils.IOUtils;
 public class HttpUtil {
 	
 	// send HTTP request
-	// http://localhost:8080/+search
+	// http://localhost:8080/search
 	public static Response request(String method, String path) {
 		try {
 			URL url = new URL(path);
